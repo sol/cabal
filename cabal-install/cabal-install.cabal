@@ -185,10 +185,10 @@ executable cabal
     -- NOTE: when updating build-depends, don't forget to update version regexps
     -- in bootstrap.sh.
     build-depends:
+        deepseq,
         array      >= 0.1      && < 0.6,
         base       >= 4        && < 5,
         bytestring >= 0.9      && < 1,
-        Cabal      >= 1.18.0   && < 1.19,
         containers >= 0.1      && < 0.6,
         filepath   >= 1.0      && < 1.4,
         HTTP       >= 4000.0.8 && < 4001,
