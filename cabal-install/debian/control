@@ -1,36 +1,25 @@
 Source: haskell-cabal-install
 Priority: extra
 Section: haskell
-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
-Uploaders: Iain Lane <laney@debian.org>
+Maintainer: Simon Hengel <sol@typeful.net>
 Build-Depends: debhelper (>= 7.0),
                haskell-devscripts (>= 0.7),
                cdbs,
                bash-completion (>= 1.0),
-               ghc (>= 7.4),
-               ghc (<< 7.5),
-               libghc-http-dev (>= 1:4000.0.2),
-               libghc-http-dev (<< 1:4001),
-               libghc-network-dev (>= 1),
-               libghc-network-dev (<< 3),
-               libghc-random-dev (>= 1),
-               libghc-random-dev (<< 1.1),
-               libghc-zlib-dev (>= 0.4),
-               libghc-zlib-dev (<< 0.6),
-               libghc-mtl-dev (>= 2.0),
-               libghc-mtl-dev (<< 3)
-Standards-Version: 3.9.2
-Homepage: http://www.haskell.org/cabal/
-Vcs-Darcs: http://darcs.debian.org/pkg-haskell/haskell-cabal-install
-Vcs-Browser: http://darcs.debian.org/cgi-bin/darcsweb.cgi?r=pkg-haskell/haskell-cabal-install
+               ghc,
+               libghc-http-dev,
+               libghc-network-dev,
+               libghc-random-dev,
+               libghc-zlib-dev,
+               libghc-mtl-dev,
+               libghc-stm-dev
 
 Package: cabal-install
 Architecture: any
 Depends: ${shlibs:Depends},
          ${haskell:Depends},
          ${misc:Depends}
-Recommends: ${haskell:Recommends}, ghc
-Suggests: ${haskell:Suggests}
+Recommends: ghc
 Description: command-line interface for Cabal and Hackage
  The 'cabal' command-line program simplifies the process of managing
  Haskell software by automating the fetching, configuration, compilation
