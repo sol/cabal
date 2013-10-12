@@ -212,19 +212,8 @@ import Distribution.Compat.Exception
          ( tryIO, catchIO, catchExit )
 import Distribution.Verbosity
 
-#ifdef VERSION_base
-import qualified Paths_Cabal (version)
-#endif
-
--- We only get our own version number when we're building with ourselves
 cabalVersion :: Version
-#if defined(VERSION_base)
-cabalVersion = Paths_Cabal.version
-#elif defined(CABAL_VERSION)
-cabalVersion = Version [CABAL_VERSION] []
-#else
-cabalVersion = Version [1,9999] []  --used when bootstrapping
-#endif
+cabalVersion = Version [1, 18, 1] []
 
 -- ----------------------------------------------------------------------------
 -- Exception and logging utils
