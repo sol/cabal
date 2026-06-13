@@ -188,6 +188,10 @@ jobs:
           fi
           echo "FLAGS=$FLAGS" >> "$GITHUB_ENV"
 
+      - name: Run cabal outdated      
+        # never ever disabled this, not even temporarily, adjust the corresponding `make` target instead
+        run: make outdated m
+
       - name: Validate build
         run: sh validate.sh $FLAGS -s build
 
